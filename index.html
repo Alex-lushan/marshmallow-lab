@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#FAF3E7">
+  <meta name="description" content="一个关于「等待为什么值得」的互动实验室。60秒挑战、两种人生、信任实验。">
+  <title>棉花糖实验室 Marshmallow Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/chart.umd.min.js"></script>
+  <script defer src="vendor/qrcode.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="mallow" viewBox="0 0 200 220">
+        <path d="M53 157 40 184m108-27 13 27" fill="none" stroke="#2D2A26" stroke-width="6" stroke-linecap="round"/>
+        <path d="M36 182q-15 6-9 13h23m108-13q15 6 9 13h-23" fill="#FFFFFF" stroke="#2D2A26" stroke-width="5" stroke-linecap="round"/>
+        <path d="M44 91Q8 88 16 119m141-28q35-17 35-39" fill="none" stroke="#2D2A26" stroke-width="6" stroke-linecap="round"/>
+        <path d="M72 30q26-9 56 0 35 4 36 39l-3 69q-3 32-37 35H73q-36-3-38-36l-2-65q0-37 39-42Z" fill="#FFFFFF" stroke="#2D2A26" stroke-width="5"/>
+        <path d="M57 45q27-12 56-7" fill="none" stroke="#2D2A26" stroke-width="3" stroke-linecap="round" opacity=".15"/>
+        <path d="M62 77q6-7 12 0m51 0q6-7 12 0m-53 15q15 18 30 0" fill="none" stroke="#2D2A26" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="60" cy="91" rx="11" ry="6" fill="#F2A0A0"/><ellipse cx="138" cy="91" rx="11" ry="6" fill="#F2A0A0"/>
+        <circle cx="100" cy="136" r="20" fill="#7FC8A9" stroke="#2D2A26" stroke-width="3"/>
+        <path d="M100 124v13l9 5" fill="none" stroke="#2D2A26" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="100" cy="136" r="1.8" fill="#2D2A26"/>
+      </symbol>
+      <symbol id="monkey" viewBox="0 0 200 220">
+        <path d="M144 158q49 17 42-22-5-15-17-6" fill="none" stroke="#2D2A26" stroke-width="7" stroke-linecap="round"/>
+        <path d="m73 170-15 23m62-23 16 23" stroke="#2D2A26" stroke-width="7" stroke-linecap="round"/>
+        <ellipse cx="44" cy="70" rx="24" ry="28" fill="#E8A75D" stroke="#2D2A26" stroke-width="5"/>
+        <ellipse cx="145" cy="70" rx="24" ry="28" fill="#E8A75D" stroke="#2D2A26" stroke-width="5"/>
+        <ellipse cx="96" cy="142" rx="44" ry="42" fill="#E8A75D" stroke="#2D2A26" stroke-width="5"/>
+        <path d="M47 69q2-47 49-47t49 47q5 48-49 49T47 69Z" fill="#E8A75D" stroke="#2D2A26" stroke-width="5"/>
+        <path d="M60 62q15-25 36-4 22-21 36 4 14 31-36 41-48-9-36-41Z" fill="#F2A0A0" stroke="#2D2A26" stroke-width="3"/>
+        <ellipse cx="79" cy="66" rx="12" ry="15" fill="#FFFFFF" stroke="#2D2A26" stroke-width="3"/>
+        <ellipse cx="113" cy="66" rx="12" ry="15" fill="#FFFFFF" stroke="#2D2A26" stroke-width="3"/>
+        <circle cx="83" cy="67" r="4" fill="#2D2A26"/><circle cx="109" cy="67" r="4" fill="#2D2A26"/>
+        <path d="M83 88q13-6 26 0m-49 52-24-21m100 14 23-30" fill="none" stroke="#2D2A26" stroke-width="5" stroke-linecap="round"/>
+        <path d="m169 68-21 31h15l-5 28 31-41h-17l8-18Z" fill="#F5C542" stroke="#2D2A26" stroke-width="3" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+  <header class="site-header">
+    <button class="brand" data-screen="home" aria-label="棉花糖实验室首页">
+      <svg aria-hidden="true"><use href="#mallow"/></svg>
+      <span>棉花糖实验室<small>Marshmallow Lab</small></span>
+    </button>
+    <div class="header-right">
+      <div id="home-qr" class="home-qr" aria-label="扫码打开当前网站"></div>
+      <button class="source-link" data-screen="sources" aria-label="来源"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7q3 0 3 3v14q-1-3-4-3H4Zm16 0h-4q-2 0-2 3m6-3v14h-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>来源</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section id="screen-home" class="screen active" aria-labelledby="home-title">
+      <div class="home-hero">
+        <div class="hero-copy">
+          <h1 id="home-title">让每一次延迟，<br>都配得上一颗<br>如期而至的棉花糖</h1>
+          <p class="hero-subtitle">一个关于「等待为什么值得」的互动实验室</p>
+        </div>
+        <div class="hero-art" aria-label="平静的棉花糖君和带来诱惑的急急猴" role="img">
+          <svg class="orbit" viewBox="0 0 480 380" aria-hidden="true"><ellipse cx="250" cy="197" rx="193" ry="137" transform="rotate(-16 250 197)" fill="none" stroke="#2D2A26" stroke-width="2" stroke-dasharray="7 8"/><path d="m403 68 4 13 14 1-12 9 3 14-11-9-12 8 4-14-11-9 14 1Z" fill="#F5C542" stroke="#2D2A26" stroke-width="2"/><circle cx="54" cy="214" r="10" fill="#F2A0A0" stroke="#2D2A26" stroke-width="2"/></svg>
+          <div class="character-message">值得等的，<br>会如期而至。</div>
+          <svg class="hero-mallow bounce" aria-hidden="true"><use href="#mallow"/></svg>
+          <svg class="hero-monkey" aria-hidden="true"><use href="#monkey"/></svg>
+        </div>
+      </div>
+      <div class="module-grid">
+        <button class="module-card module-sprint" data-screen="sprint">
+          <span class="module-icon" aria-hidden="true">⏳</span>
+          <span class="module-title">60秒挑战</span>
+          <span class="module-description">你能忍住不点吗？人性第一现场</span>
+          <span class="module-action">开始挑战</span>
+        </button>
+        <button class="module-card module-lives" data-screen="lives">
+          <span class="module-icon" aria-hidden="true">🍵</span>
+          <span class="module-title">两种人生</span>
+          <span class="module-description">每天一杯奶茶，还是每天一点积累？</span>
+          <span class="module-action">快进人生</span>
+        </button>
+        <button class="module-card module-trust" data-screen="trust">
+          <span class="module-icon" aria-hidden="true">🤝</span>
+          <span class="module-title">信任实验</span>
+          <span class="module-description">当承诺不可信，你还愿意等吗？</span>
+          <span class="module-action">进入实验</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="screen-sprint" class="screen game-screen" aria-label="60秒挑战" hidden><div id="sprint-content"></div></section>
+    <section id="screen-lives" class="screen game-screen" aria-label="两种人生" hidden><div id="lives-content"></div></section>
+    <section id="screen-trust" class="screen game-screen" aria-label="信任实验" hidden><div id="trust-content"></div></section>
+    <section id="screen-board" class="screen" aria-label="榜单" hidden>
+      <div class="page-intro"><h1>等待，也值得被记住。</h1><p>榜单 · 本机 Top 10</p></div>
+      <div id="board-content"></div><button class="button" data-screen="home">返回首页</button>
+    </section>
+    <section id="screen-sources" class="screen" aria-label="来源" hidden>
+      <div class="page-intro"><h1>每一次互动，<br>都有科学的来处。</h1><p>学术来源与艺术风格参考</p></div>
+      <button class="button secondary" data-screen="board">查看榜单</button>
+      <ol id="source-list" class="source-list"></ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">棉花糖实验测的不是意志力，而是信任。｜ 耐心不是意志力的勋章，而是安全感的特权。</footer>
+  <nav class="tab-bar" aria-label="主导航">
+    <button data-screen="home" aria-current="page">首页</button>
+    <button data-screen="sprint">60秒挑战</button>
+    <button data-screen="lives">两种人生</button>
+    <button data-screen="trust">信任实验</button>
+  </nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="card-dialog" aria-labelledby="share-title">
+    <div class="dialog-head"><h2 id="share-title">你的等待记录</h2><button class="close-dialog" aria-label="关闭结果卡">×</button></div>
+    <canvas id="result-canvas" width="750" height="1334" hidden></canvas>
+    <img id="result-image" alt="棉花糖实验室结果卡">
+    <p class="save-tip">长按保存图片</p><a id="download-card" class="button" download="棉花糖实验室结果卡.png">保存图片</a>
+  </dialog>
+  <div id="qr-buffer" hidden></div>
+</body>
+</html>
