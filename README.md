@@ -37,9 +37,9 @@
 - 建设指令允许表情白名单与其固定彩蛋和分组信息中的 🎉、✅、⚠️ 有冲突，固定原文优先，仅在指定位置保留。
 - 引文、学术数字和固定文案按建设指令保留。来源页仅将原文 URL 转为可在新标签页打开的链接。流程中的引文保留 URL 文本，不设置外链，以免打断游戏。
 - 首页二维码及结果卡二维码取当前页面地址。公开部署后它们指向真实部署网址；本地 file 地址与 127.0.0.1 地址仅用于本机体验，不支持评委其他手机扫码访问。PNG 由 Canvas 绘制为 750×1334，手机可长按保存，也提供下载。
-- 2026-11-24 已通过 Sites 发布 HTTPS 网址：https://marshmallow-lab-pbl.gpt-shared-qy.chatgpt.site 。已于 2026-11-24 经用户明确授权开启公开访问。实际手机与匿名访问触发 Cloudflare 403，当前地址暂不能作为评委扫码入口。GitHub 账号已授权，公开仓库为 https://github.com/Alex-lushan/marshmallow-lab ，正在发布到 GitHub Pages。托管工作目录为 output/sites/marshmallow-lab，发布静态目录为 dist，托管配置保存在 .openai/hosting.json。
+- 2026-11-24 已通过 Sites 发布 HTTPS 网址：https://marshmallow-lab-pbl.gpt-shared-qy.chatgpt.site 。已于 2026-11-24 经用户明确授权开启公开访问。实际手机与匿名访问触发 Cloudflare 403，当前地址暂不能作为评委扫码入口。GitHub Pages 已于 2026-11-24 发布成功，当前使用网址为 https://alex-lushan.github.io/marshmallow-lab/ 。公开仓库为 https://github.com/Alex-lushan/marshmallow-lab 。已验证未登录请求首页、CSS、应用脚本和两个本地库均返回 HTTP 200，且文件校验值与本地源码一致；GitHub 版二维码已通过系统解码校验。托管工作目录为 output/sites/marshmallow-lab，发布静态目录为 dist，托管配置保存在 .openai/hosting.json。
 
-本地验收于 2026-11-20 完成。使用 WebKit 真实加载 file://，覆盖全部六屏的 375px / 1920px 视口、44px 触控区、三模块完整流程、四策略效果及各自引文、随机两组的奖励与解释、真实 60 秒自然倒计时、刷新恢复、4 秒默认选择、小任务超时、存储拒绝时内存降级。实际下载的 PNG 为 750×1334，二维码经系统解码器验证。其余长时间边界通过测试环境偏移 Date.now() 验证，生产代码无加速入口。未在实体手机以及 Chrome / Edge 上分别实测。2026-11-24 已确认 Sites 部署成功，GitHub Pages 方案保留为备选部署说明。
+本地验收于 2026-11-20 完成。使用 WebKit 真实加载 file://，覆盖全部六屏的 375px / 1920px 视口、44px 触控区、三模块完整流程、四策略效果及各自引文、随机两组的奖励与解释、真实 60 秒自然倒计时、刷新恢复、4 秒默认选择、小任务超时、存储拒绝时内存降级。实际下载的 PNG 为 750×1334，二维码经系统解码器验证。其余长时间边界通过测试环境偏移 Date.now() 验证，生产代码无加速入口。未在实体手机以及 Chrome / Edge 上分别实测。2026-11-24 已确认 Sites 部署成功，当前正式使用 GitHub Pages 地址。
 
 部署时在已授权 GitHub 账号中新建公开仓库，将本目录六文件上传仓库根目录，在 Settings → Pages 中选择 Deploy from a branch、main、root 后保存。部署 URL 以 GitHub 实际返回为准；打开部署地址后首页和结果卡二维码自动取该地址。
 
