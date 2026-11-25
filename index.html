@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="yue-Hant-HK">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#FAF3E7">
-  <meta name="description" content="一个关于「等待为什么值得」的互动实验室。60秒挑战、两种人生、信任实验。">
-  <title>棉花糖实验室 Marshmallow Lab</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="一個講「點解值得等」嘅互動實驗室。即刻拎 2 粒，等 20、25 或 30 秒拎 5 粒棉花糖。">
+  <title>棉花糖實驗室 Marshmallow Lab</title>
+  <link rel="stylesheet" href="styles.css?v=20261125-yue">
   <script defer src="vendor/chart.umd.min.js"></script>
   <script defer src="vendor/qrcode.min.js"></script>
-  <script defer src="app.js"></script>
+  <script defer src="app.js?v=20261125-yue"></script>
 </head>
 <body>
   <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -43,13 +43,13 @@
     </defs>
   </svg>
   <header class="site-header">
-    <button class="brand" data-screen="home" aria-label="棉花糖实验室首页">
+    <button class="brand" data-screen="home" aria-label="棉花糖實驗室主頁">
       <svg aria-hidden="true"><use href="#mallow"/></svg>
-      <span>棉花糖实验室<small>Marshmallow Lab</small></span>
+      <span>棉花糖實驗室<small>Marshmallow Lab</small></span>
     </button>
     <div class="header-right">
-      <div id="home-qr" class="home-qr" aria-label="扫码打开当前网站"></div>
-      <button class="source-link" data-screen="sources" aria-label="来源"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7q3 0 3 3v14q-1-3-4-3H4Zm16 0h-4q-2 0-2 3m6-3v14h-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>来源</span></button>
+      <div id="home-qr" class="home-qr" aria-label="掃碼開啟呢個網站"></div>
+      <button class="source-link" data-screen="sources" aria-label="資料來源"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7q3 0 3 3v14q-1-3-4-3H4Zm16 0h-4q-2 0-2 3m6-3v14h-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>資料來源</span></button>
     </div>
   </header>
 
@@ -57,12 +57,12 @@
     <section id="screen-home" class="screen active" aria-labelledby="home-title">
       <div class="home-hero">
         <div class="hero-copy">
-          <h1 id="home-title">让每一次延迟，<br>都配得上一颗<br>如期而至的棉花糖</h1>
-          <p class="hero-subtitle">一个关于「等待为什么值得」的互动实验室</p>
+          <h1 id="home-title">每一次肯等，<br>都值得拎到<br>準時送到嘅棉花糖</h1>
+          <p class="hero-subtitle">一個講「點解值得等」嘅互動實驗室</p>
         </div>
-        <div class="hero-art" aria-label="平静的棉花糖君和带来诱惑的急急猴" role="img">
+        <div class="hero-art" aria-label="淡定嘅棉花糖君同帶嚟誘惑嘅急急猴" role="img">
           <svg class="orbit" viewBox="0 0 480 380" aria-hidden="true"><ellipse cx="250" cy="197" rx="193" ry="137" transform="rotate(-16 250 197)" fill="none" stroke="#2D2A26" stroke-width="2" stroke-dasharray="7 8"/><path d="m403 68 4 13 14 1-12 9 3 14-11-9-12 8 4-14-11-9 14 1Z" fill="#F5C542" stroke="#2D2A26" stroke-width="2"/><circle cx="54" cy="214" r="10" fill="#F2A0A0" stroke="#2D2A26" stroke-width="2"/></svg>
-          <div class="character-message">值得等的，<br>会如期而至。</div>
+          <div class="character-message">肯等一等，<br>5 粒準時到。</div>
           <svg class="hero-mallow bounce" aria-hidden="true"><use href="#mallow"/></svg>
           <svg class="hero-monkey" aria-hidden="true"><use href="#monkey"/></svg>
         </div>
@@ -70,52 +70,52 @@
       <div class="module-grid">
         <button class="module-card module-sprint" data-screen="sprint">
           <span class="module-icon" aria-hidden="true">⏳</span>
-          <span class="module-title">60秒挑战</span>
-          <span class="module-description">你能忍住不点吗？人性第一现场</span>
-          <span class="module-action">开始挑战</span>
+          <span class="module-title">棉花糖挑戰</span>
+          <span class="module-description">即刻拎 2 粒，定係等夠鐘拎 5 粒？</span>
+          <span class="module-action">開始挑戰</span>
         </button>
         <button class="module-card module-lives" data-screen="lives">
           <span class="module-icon" aria-hidden="true">🍵</span>
-          <span class="module-title">两种人生</span>
-          <span class="module-description">每天一杯奶茶，还是每天一点积累？</span>
-          <span class="module-action">快进人生</span>
+          <span class="module-title">兩種人生</span>
+          <span class="module-description">每次即刻食 2 粒，定係留低累積 5 粒？</span>
+          <span class="module-action">快轉人生</span>
         </button>
         <button class="module-card module-trust" data-screen="trust">
           <span class="module-icon" aria-hidden="true">🤝</span>
-          <span class="module-title">信任实验</span>
-          <span class="module-description">当承诺不可信，你还愿意等吗？</span>
-          <span class="module-action">进入实验</span>
+          <span class="module-title">信任實驗</span>
+          <span class="module-description">承諾信唔過，你仲肯唔肯等？</span>
+          <span class="module-action">開始實驗</span>
         </button>
       </div>
     </section>
 
-    <section id="screen-sprint" class="screen game-screen" aria-label="60秒挑战" hidden><div id="sprint-content"></div></section>
-    <section id="screen-lives" class="screen game-screen" aria-label="两种人生" hidden><div id="lives-content"></div></section>
-    <section id="screen-trust" class="screen game-screen" aria-label="信任实验" hidden><div id="trust-content"></div></section>
-    <section id="screen-board" class="screen" aria-label="榜单" hidden>
-      <div class="page-intro"><h1>等待，也值得被记住。</h1><p>榜单 · 本机 Top 10</p></div>
-      <div id="board-content"></div><button class="button" data-screen="home">返回首页</button>
+    <section id="screen-sprint" class="screen game-screen" aria-label="棉花糖挑戰" hidden><div id="sprint-content"></div></section>
+    <section id="screen-lives" class="screen game-screen" aria-label="兩種人生" hidden><div id="lives-content"></div></section>
+    <section id="screen-trust" class="screen game-screen" aria-label="信任實驗" hidden><div id="trust-content"></div></section>
+    <section id="screen-board" class="screen" aria-label="排行榜" hidden>
+      <div class="page-intro"><h1>每次肯等，都值得記低。</h1><p>排行榜 · 本機頭 10 名</p></div>
+      <div id="board-content"></div><button class="button" data-screen="home">返主頁</button>
     </section>
-    <section id="screen-sources" class="screen" aria-label="来源" hidden>
-      <div class="page-intro"><h1>每一次互动，<br>都有科学的来处。</h1><p>学术来源与艺术风格参考</p></div>
-      <button class="button secondary" data-screen="board">查看榜单</button>
+    <section id="screen-sources" class="screen" aria-label="資料來源" hidden>
+      <div class="page-intro"><h1>每次互動，<br>都有科學根據。</h1><p>學術資料同畫風參考</p></div>
+      <button class="button secondary" data-screen="board">睇排行榜</button>
       <ol id="source-list" class="source-list"></ol>
     </section>
   </main>
 
-  <footer class="site-footer">棉花糖实验测的不是意志力，而是信任。｜ 耐心不是意志力的勋章，而是安全感的特权。</footer>
-  <nav class="tab-bar" aria-label="主导航">
-    <button data-screen="home" aria-current="page">首页</button>
-    <button data-screen="sprint">60秒挑战</button>
-    <button data-screen="lives">两种人生</button>
-    <button data-screen="trust">信任实验</button>
+  <footer class="site-footer">棉花糖實驗想睇嘅，係信任點樣影響等候。｜ 有安全感，先有底氣慢慢等。</footer>
+  <nav class="tab-bar" aria-label="主要導覽">
+    <button data-screen="home" aria-current="page">主頁</button>
+    <button data-screen="sprint">棉花糖挑戰</button>
+    <button data-screen="lives">兩種人生</button>
+    <button data-screen="trust">信任實驗</button>
   </nav>
   <div id="toast" role="status" aria-live="polite"></div>
   <dialog id="card-dialog" aria-labelledby="share-title">
-    <div class="dialog-head"><h2 id="share-title">你的等待记录</h2><button class="close-dialog" aria-label="关闭结果卡">×</button></div>
+    <div class="dialog-head"><h2 id="share-title">你嘅等候紀錄</h2><button class="close-dialog" aria-label="閂埋成績卡">×</button></div>
     <canvas id="result-canvas" width="750" height="1334" hidden></canvas>
-    <img id="result-image" alt="棉花糖实验室结果卡">
-    <p class="save-tip">长按保存图片</p><a id="download-card" class="button" download="棉花糖实验室结果卡.png">保存图片</a>
+    <img id="result-image" alt="棉花糖實驗室成績卡">
+    <p class="save-tip">長撳圖片就儲到</p><a id="download-card" class="button" download="棉花糖實驗室成績卡.png">儲存圖片</a>
   </dialog>
   <div id="qr-buffer" hidden></div>
 </body>

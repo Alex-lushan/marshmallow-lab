@@ -2,7 +2,7 @@
   --cream: #FAF3E7; --white: #FFFFFF; --ink: #2D2A26; --caramel: #E8A75D;
   --mint: #7FC8A9; --pink: #F2A0A0; --coral: #FF6B6B; --blue: #5B8DEF; --gold: #F5C542;
   --border: 3px solid var(--ink); --shadow: 0 4px 0 rgba(45,42,38,0.15);
-  font: 100%/1.7 "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  font: 100%/1.7 "PingFang HK", "PingFang TC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
   color: var(--ink); background: var(--cream); color-scheme: light;
 }
 * { box-sizing: border-box; }
@@ -188,4 +188,18 @@ dialog::backdrop { background: rgba(45,42,38,.55); }
 }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { animation: none !important; transition: none !important; }
+}
+
+/* 棉花糖图案直接复用原创 SVG，并按实际奖励数量排列。 */
+.mallow-pile { display: inline-flex; align-items: center; justify-content: center; gap: 1px; flex-wrap: wrap; }
+.mallow-token { width: 45px; height: 50px; flex: none; }
+.delayed-offer { margin-top: 12px; }
+.delayed-offer p { font-size: 15px; font-weight: 700; }
+.delayed-offer .mallow-token { width: 35px; height: 39px; }
+.catch-mallow { width: 43px; height: 47px; display: block; margin: auto; }
+.tab-bar button { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .reward-button .mallow-token { width: 40px; height: 44px; }
+  .delayed-offer .mallow-token { width: 29px; height: 33px; }
+  .result-card .big-number { font-size: clamp(32px, 9vw, 58px); }
 }
